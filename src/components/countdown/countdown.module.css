@@ -1,0 +1,24 @@
+.countdown {
+  width: 75%;
+  height: 75%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 226, 168);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 226, 168, 1) 0%,
+    rgba(255, 233, 190, 1) 35%,
+    rgba(184, 255, 175, 1) 100%
+  );
+  z-index: 10;
+}
+
+.countdown h1 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.485);
+}
