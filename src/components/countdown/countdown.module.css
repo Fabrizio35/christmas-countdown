@@ -1,24 +1,172 @@
 .countdown {
-  width: 75%;
-  height: 75%;
-  border-radius: 20px;
+  width: 80%;
+  height: 80%;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: rgb(255, 226, 168);
+  gap: 32px;
+  box-shadow: 30px 30px 25px rgba(91, 91, 91, 0.214);
+  background: rgba(255, 228, 195, 0.7);
   background: linear-gradient(
     180deg,
-    rgba(255, 226, 168, 1) 0%,
-    rgba(255, 233, 190, 1) 35%,
-    rgba(184, 255, 175, 1) 100%
+    rgba(255, 228, 195, 0.7) 0%,
+    rgba(255, 236, 213, 0.7) 35%,
+    rgba(192, 232, 200, 0.7) 100%
   );
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown section {
+  display: flex;
+  width: 100%;
+  user-select: none;
+  margin-top: 16px;
+}
+
+.countdown article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  gap: 20px;
+}
+
+.numberContainer {
+  position: relative;
+}
+
+.numberContainer span {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 6rem;
+  padding: 12px 20px;
+  color: #4a7c72;
+  font-weight: 500;
+}
+
+.separationContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  user-select: none;
+}
+
+.timeSeparation {
+  font-size: 7rem;
+  color: #4a7c72;
+}
+
+.fieldsTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fieldsTitleContainer h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #4a7c72;
+  width: 25%;
+}
+
+.countdown h2 {
+  font-size: 6rem;
+  color: rgb(253, 255, 236);
+  text-shadow: 0 0 5px rgba(205, 213, 121, 0.8),
+    0 0 10px rgba(205, 213, 121, 0.8), 0 0 15px rgba(205, 213, 121, 0.8);
+  stroke-width: 2px;
+  user-select: none;
+}
+
+.image1 {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.snow {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  top: -16px;
+  left: 0;
   z-index: 10;
 }
 
-.countdown h1 {
-  color: white;
-  font-size: 4rem;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.485);
+@media (max-width: 1200px) {
+  .countdown {
+    width: 95%;
+  }
+
+  .numberContainer span {
+    font-size: 3rem;
+  }
+
+  .timeSeparation {
+    font-size: 3.5rem;
+  }
+
+  .fieldsTitleContainer h3 {
+    font-size: 1.5rem;
+  }
+
+  .countdown h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .countdown article {
+    gap: 8px;
+  }
+
+  .numberContainer span {
+    font-size: 1.5rem;
+    padding: 6px 14px;
+  }
+
+  .timeSeparation {
+    font-size: 2rem;
+  }
+
+  .fieldsTitleContainer h3 {
+    font-size: 1rem;
+  }
+
+  .countdown h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .countdown article {
+    gap: 6px;
+  }
+
+  .numberContainer span {
+    font-size: 1rem;
+    padding: 4px 12px;
+  }
+
+  .timeSeparation {
+    font-size: 1.5rem;
+  }
+
+  .fieldsTitleContainer h3 {
+    font-size: 0.8rem;
+  }
+
+  .countdown h2 {
+    font-size: 2rem;
+  }
 }

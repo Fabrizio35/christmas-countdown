@@ -1,8 +1,8 @@
 interface Time {
-  days: string;
-  hours: string;
-  minutes: string;
-  seconds: string;
+  days: string[];
+  hours: string[];
+  minutes: string[];
+  seconds: string[];
 }
 
 export const calculateTimeLeft = (targetDate: number): number => {
@@ -17,8 +17,10 @@ export const formatTime = (milliseconds: number): Time => {
   const hours = Math.floor((milliseconds / (1000 * 60 * 60)) % 24);
   const days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
 
-  const formatWithZero = (value: number): string => {
-    return value < 10 ? `0${value}` : `${value}`;
+  const formatWithZero = (value: number): string[] => {
+    const stringValue = value < 10 ? `0${value}` : `${value}`;
+
+    return stringValue.split("");
   };
 
   return {
