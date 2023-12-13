@@ -11,7 +11,10 @@ const Form: React.FC = () => {
     <form className={style.form}>
       <input
         type="text"
+        name="christmas-wish"
+        id="christmas-wish"
         placeholder="What's your Christmas wish?"
+        autoComplete="off"
         className={questrial.className}
       />
 

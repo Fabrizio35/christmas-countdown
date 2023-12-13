@@ -1,12 +1,20 @@
 import style from "./page.module.css";
 import Countdown from "@/components/countdown/countdown";
-import ParticlesBackground from "@/components/particles-background";
+import SnowParticles from "@/components/particles/snow-particles";
+import Image from "next/image";
+import { images } from "@/utils/images";
 
 export default function Home() {
   return (
-    <main className={style.main}>
-      <ParticlesBackground />
+    <div className={style.main}>
+      <SnowParticles />
       <Countdown />
-    </main>
+      <Image
+        src={images.background}
+        alt="image-3"
+        className={style.image3}
+        priority
+      />
+    </div>
   );
 }

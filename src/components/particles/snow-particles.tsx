@@ -4,15 +4,16 @@ import { useCallback } from "react";
 import { loadFull } from "tsparticles";
 import type { Engine } from "tsparticles-engine";
 
-const ParticlesBackground = () => {
+const SnowParticles = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
 
   return (
     <Particles
-      id="ts-particles"
+      id="snow-particles"
       init={particlesInit}
+      className="snow-particles"
       options={{
         particles: {
           number: {
@@ -127,4 +128,4 @@ const ParticlesBackground = () => {
   );
 };
 
-export default ParticlesBackground;
+export default SnowParticles;
