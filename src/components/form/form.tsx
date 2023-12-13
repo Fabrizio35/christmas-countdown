@@ -1,5 +1,6 @@
 import style from "./form.module.css";
 import { Questrial } from "next/font/google";
+import { useState } from "react";
 
 const questrial = Questrial({
   subsets: ["latin"],
@@ -7,8 +8,15 @@ const questrial = Questrial({
 });
 
 const Form: React.FC = () => {
+  const [input, setInput] = useState<string>("");
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setInput("");
+  };
+
   return (
-    <form className={style.form}>
+    <form onSubmit={submitHandler} className={style.form}>
       <input
         type="text"
         name="christmas-wish"
@@ -16,6 +24,8 @@ const Form: React.FC = () => {
         placeholder="What's your Christmas wish?"
         autoComplete="off"
         className={questrial.className}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
       />
 
       <button className={`${style.buttonForm} ${questrial.className}`}>
